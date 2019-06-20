@@ -1,0 +1,3 @@
+a=float(input("Gunluk kac kilometre yol yapiyorsunuz  :"))
+mil=a*0.62
+print("MIL CINSINDEN YAPMIS OLDUGUNUZ YOL MIKTARI  =",mil,end=" mil'dir.")
