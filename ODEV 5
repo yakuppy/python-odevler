@@ -1,0 +1,25 @@
+'''Aylik masraf programi
+Icerik:
+Aylık giderleri ve bu giderlerin aylik gelire oranini hesaplayan bir program yapmanız istenmektedir.
+Yontem:
+Asagida belirtilen harcama kalemlerini ve aylik geliri kullanicidan input ile alip gerekli hesaplamalari yapin
+Harcama kalemleri:
+-mutfak,
+-egitim,
+-giyim,
+-ulasim.
+
+Sonuc:
+1-Kullanicinin aylik toplam masrafini ve bu masrafin aylik gelirine oranini ekrana printleyin.
+2- Ayni sonucu “aylikmasraf” isimli bir dosyaya kaydedin.'''
+f=open("aylik masraf.txt","w")
+gelir=int(input("aylik geliriniz ne kadar  :"))
+mutfak=int(input("mutfak gideriniz ne kadar    :"))
+egitim=int(input("egitim gideriniz ne kadar    :"))
+giyim=int(input("giyim gideriniz ne kadar    :"))
+ulasim=int(input("ulasim gideriniz ne kadar    :"))
+print("AYLIK TOPLAM MASRAFINIZ    :",mutfak+egitim+giyim+ulasim,"\n","MASRAFINIZIN AYLIK GELIRE ORANI % "
+      ,(mutfak+egitim+giyim+ulasim)/gelir*100,sep="")
+print("GELIR   : ",gelir,"\n","mutfak masrfi    :",mutfak,"\n","egitim masrfi    :",egitim,"\n","giyim masrfi    :",giyim,"\n","ulasim masrfi    :",ulasim,"\n",
+ "AYLIK TOPLAM MASRAFINIZ    :",mutfak+egitim+giyim+ulasim,"\n","MASRAFINIZIN AYLIK GELIRE ORANI % "
+      ,(mutfak+egitim+giyim+ulasim)/gelir*100,sep="",file=f)
