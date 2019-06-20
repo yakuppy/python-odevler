@@ -1,0 +1,14 @@
+f=open("not degerlendirme.txt","w")
+a=input("Degerli ogrencimiz isminiz ve soyisminizi sisteme giriniz")
+b=int(input("vize puaniniz"))
+c=int(input("final puaniniz"))
+d=int(input("derse gelmediginiz gunler"))
+ders_takip_puani=(100-(d*5))*0.2
+vize_puani=b*0.3
+final_puani=c*0.5
+
+print("YIL SONU PUANINIZ  :", ders_takip_puani+vize_puani+final_puani)
+print("ism soyisim   :" ,a,"\n","vize puaniniz   :",b,"\n","final puaniniz    :",c,"\n","derse gelmediginiz gunler    :",d,"\n",
+     "YIL SONU PUANINIZ  :", ders_takip_puani+vize_puani+final_puani ,sep="",file=f)
+
+f.close()
