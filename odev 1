@@ -1,0 +1,6 @@
+'''1-
+Input ile kullanıcıdan bir kelime yazmasını isteyip, bu kelimeyi altı çizili ve etrafı desenli bir şekilde printleyin.'''
+a=input("EN COK SEVDIGINIZ KISININ ISMINI BUYUK HARFLE YAZINIZ.")
+print("\t"*10,"*"*15,"\n","\t"*9,"##","\t"*4,"##","\n","\t"*8,"##","\t"*6,"##","\n",
+      "\t"*7,"##","\t"*5,"\t"*3,"##","\n","\t"*11,a,"\n","\t"*11,"-"*len(a),"\n","\t"*7,"##","\t"*8,"##"
+      ,"\n","\t"*8,"##","\t"*6,"##","\n","\t"*9,"##","\t"*4,"##","\n","\t"*10,"*"*15,)
