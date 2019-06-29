@@ -1,1 +1,1 @@
-# python-odevler
+1.hafta odevler
