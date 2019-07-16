@@ -1,0 +1,79 @@
+'''*TO DO LIST*
+
+-Yapilacaklar listesi ve yapilanlar listesi seklinde iki bos liste olusturun. Kullanicinin yapabilecegi islemler:
+
+    *Yapilacaklar listesine gorev ekleme
+        ->append metodu kullanilsin
+
+    *Yapilacaklar listesinden gorev silme
+        -> del metodu kullanilsin
+
+    *Yapilacaklar listesindeki gorevi yapilanlar listesine atama
+        -> pop metodu kullanilsin
+
+    *Yapilanlar listesini goruntuleme
+
+    *kullanıcı yapılacaklar listesinin içini boşaltma
+        -> clear metodu kullanılsın
+
+-Dongu her basa dondugunde yapilacaklar listesi goruntulensin
+-Her iki liste goruntulenirken liste elemanlari numaralandirilarak verilsin
+    ORN:
+        Yapilacaklar Listesi:
+            1- Python odevini yap.
+            2- Alis-veris yapmaya git.
+            3- Ahmet'i ara.
+
+- Eger yapilacaklar listesi bos ise "Su an yapilacaklar listeniz bos" seklinde bir cikti versin.'''
+
+
+yapilacaklar_listesi=["eve git","okula git","tv izle"]
+yapilanlar_listesi=["balik tut"]
+
+while True:
+
+    print("....YAPILACAKLAR LISTESI....")
+    for oge_sirasi in range(len(yapilacaklar_listesi)):#ANLASILIR SEKILDE LISTEYI PARCALIYORUZ
+        print("{}. {}".format(oge_sirasi+1, yapilacaklar_listesi[oge_sirasi]))
+    print(''' ASAGIDAKI LISTEDE YAPMAK ISTEDIGINIZ DEGISIKLIGI NUMARASINI BELEIRTEREK SECINIZ:
+     1)GOREV EKLEME
+     2)GOREV SILME 
+     3)GOREV YERINI DEGISTIRME
+     4)YAPILAN GOREV LISTESINI KONTROL ETME
+     5)YAPACAKLAR LISTESINI TEMIZLEM''')
+
+    secenek=input("  secenegi belirtiniz  :")
+
+
+    if secenek=="1":
+        ekleleme=input("yapilacaklar listesine  gorev ekleyiniz   :" )
+        yapilacaklar_listesi.append(ekleleme)
+        print("yeni gorev listesi :",yapilacaklar_listesi)
+
+    if secenek=="2":
+        a=0
+        for i in yapilacaklar_listesi:
+            a+=1
+            print("{} {}  ".format(a,i))
+        c=int(input("silmek istediginiz gorevi seciniz"))#BURADA SECILN DEGER INT A CEVRILERK LISTEDEDE ISTEDIGIMIZ YERE ULASIYORZ
+
+        del yapilacaklar_listesi[c-1]
+        print("yeni gorev listesi   : " ,yapilacaklar_listesi)
+    if secenek=="3":
+        a = 0
+        for i in yapilacaklar_listesi:
+            a += 1
+            print("{} {}  ".format(a, i))
+        c = int(input("yerini degistirmek istediginiz gorevi seciniz"))
+        son=yapilacaklar_listesi.pop(c-1)
+        print(son)
+        yapilanlar_listesi=yapilanlar_listesi+[str(son)]
+        print("yeni liste olusturuluyor....")
+
+        print("yapilanlar listesi    :" ,yapilanlar_listesi)
+    if secenek=="4":
+        print(*yapilanlar_listesi)
+
+    if secenek=="5":
+        yapilacaklar_listesi.clear()
+        print("listeniz temizlenmistir   :",yapilacaklar_listesi)
